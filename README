@@ -1,0 +1,6 @@
+This IPython notebook allows you to use the full archive search endpoint for Twitter's API v2.
+You must be approved for the Academic Research track to use this script.
+
+The last cell of the notebook allows you to specify the parameters for your search. You will need a bearer token to authenticate.
+
+NOTE: The endpoint allows you to make only 1 request per second and 300 requests per 15 minutes. Accordingly, if your query returns more than 150k tweets, this script will sleep for 10 minutes before resuming.
