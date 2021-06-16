@@ -1,6 +1,6 @@
-This Jupyter notebook allows you to use the full archive search endpoint for Twitter's API v2.
-You must be approved for the Academic Research track to use this script.
+This Jupyter notebook/script allows you to use the full archive search endpoint for Twitter's API v2. You must be approved for the Academic Research track to use this script.
 
 The last cell of the notebook allows you to specify the parameters for your search. You will need a bearer token to authenticate.
 
-NOTE: The endpoint allows you to make only 1 request per second and 300 requests per 15 minutes. Accordingly, if your query returns more than 150k tweets, this script will sleep for 10 minutes before resuming.
+NOTE: The endpoint allows you to make only 1 request per second and 300 requests per 15 minutes. Accordingly, the script will pause for 3.1 seconds between each request to stay within the rate limits.
+The search endpoint returns Tweet objects. The v2 API has significantly revamped the object model, so extended fields will need to be specified separately using the new fields and expansions parameters. Although additional information about the user are available for each tweet, the expansions parameter is slightly tricky to deal with. I'm currently working on a solution to add more user detail fields apart from the user id. If you're feeling adventurous, you can refer to the documentation for fields and expansions to modify the code!
